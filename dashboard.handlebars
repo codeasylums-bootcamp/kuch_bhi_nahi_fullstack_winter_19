@@ -1,0 +1,85 @@
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <div style="position:fixed; margin-left:500px" class="container">
+   <h2 style="transform: translate(-50% ,-50%); color:red; margin-left:200px">MISSION <span class="type"></span></h2>
+      <script src="typed.js"></script> 
+     <script> var typed = new Typed('.type', {
+  strings: [
+  'BRIEFING', 
+  'REQUIREMENTS'],
+  typeSpeed: 60,
+  backSpeed: 60,
+  loop: true
+  });
+</script>
+</div>
+
+
+<div class="container-fluid " style="background-color:black;height:700px ;width:1500px; margin-top:200px; box-shadow: 10px 5px 20px red; border-radius:10px">
+  
+  <div class="row">
+   
+    <div class="col-sm-4" style="width:600px">
+     <div style="color:white; margin-top:80px; margin-left:50px">
+     <h1> Hello {{response1.nick}}</h1>
+     <br>
+     <p>Target Name : </p>
+     <h3>{{response1.target.name}}</h3>
+     <br>
+     <p>Target Address : </p>
+      <h3>{{response1.target.address}}</h3>
+      <br>
+      <p>Latitude : Longitude</p>
+      <h3>{{response1.target.latitude}} : {{response1.target.longitude}}</h3> 
+      <br>
+      <p>Killing Instructions : </p>
+      <h3>{{response1.target.way}}</h3>
+      
+</div>
+     
+    </div>
+     <div class="col-sm-8" style="width:800px">
+   <div id="map" style="height:700px; margin-top:1px;width:990px; border-radius:10px;"></div>
+<script>
+    function initMap(){
+          var uluru = {lat: {{response1.target.latitude}}, lng: {{response1.target.longitude}} };  
+        var map = new
+        google.maps.Map(document.getElementById('map'),{zoom: 4, center: uluru});
+        var marker = new google.maps.Marker({position: uluru, map: map}); 
+        
+         var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Target</h1>'+
+            '<div id="bodyContent">'+
+            'Target: {{response1.target.name}}'+'<br>'+'{{response1.target.address}}'
+            '</div>'+
+            '</div>'; 
+
+         var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+          title: 'Uluru (Ayers Rock)'
+        });
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+      }
+
+        
+
+    
+</script>
+   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnllsOUvQYDLfya0x_0N-V1X9Ztxg5UBI&callback=initMap">
+    </script>  --}} 
+
+
+    </div>
+  </div>
+  

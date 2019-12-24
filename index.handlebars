@@ -1,0 +1,345 @@
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
+
+<div class="parent">
+       
+        <div class="first_col">
+            <!-- <img src="menu-01.png" alt=""> -->
+            <div class="writup">
+                <h1>
+                    HITMANINC
+                </h1>
+            </div>
+
+            <div class="container">
+                <!-- <div class="icon1">
+                    <img src="icon2-01.png" width="100px" height="100px" alt="">
+                    <h1>accuracy</h1>
+                </div> -->
+                <div class="des1">
+                    <div class="icon1">
+                        <img src="icon2-01.png" width="100px" height="100px" alt="">
+                    </div>
+                    <div class="content">
+                        <h1>ACCURACY 50%</h1>
+                    </div>
+                </div>
+
+                <div class="des1">
+                    <div class="icon1">
+                        <img src="icon2-01.png" width="100px" height="100px" alt="">
+                    </div>
+                    <div class="content">
+                        <h1>AVGTIME 24HRS</h1>
+                    </div>
+                </div>
+
+                <div class="des1">
+                    <div class="icon1">
+                        <img src="icon2-01.png" width="100px" height="100px" alt="">
+                    </div>
+                    <div class="content">
+                        <h1>COST 50L</h1>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="name">
+                <h1>
+                    DEMON
+                </h1>
+            </div>
+
+        </div>
+        <div class="second_col">
+
+        </div>
+        <div class="third_col">
+
+            <div class="child1">
+                <a class="payment" href='/cust' style="text-decoration: none;">
+                    <h4>BOOK NOW</h4>
+                </a>
+
+            </div>
+
+            <div class="child1">
+                <a class="payment" href='/info' style="text-decoration: none;">
+                    <h4>MEMBER</h4>
+                </a>
+
+            </div>
+
+            <div class="child1">
+                {{!-- <a class="payment" style="text-decoration: none;">
+                    <h4>OFFERS!!</h4>
+                </a> --}}
+                
+                <script>
+        var bleep = new Audio();
+        bleep.src = "bleep.mp3"
+        </script>
+    
+                <button onmousedown="bleep.play()" id="modalBtn" class="button">OFFER</button>
+      <div id="simpleModal" class="modal">
+          <div class="modal-content">
+              <span class="closeBtn">&times;</span>
+              <p style="font-size:30px; margin-top:350px; margin-left:180px; color:#f34636">Bring New Year </p>
+              <br>
+              <p style="font-size:30px;margin-left:175px; margin-top:-50px; color:#f34636">Without Any Fear</p>
+          </div>
+      </div>  
+
+
+<script>
+        var modal = document.getElementById('simpleModal');
+        var modalBtn = document.getElementById('modalBtn');
+        var closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+        //listen for open click
+        modalBtn.addEventListener('click',openModal);
+
+        //listen for close click
+        closeBtn.addEventListener('click',closeModal);
+
+        //function to open modal
+        function openModal(){
+            modal.style.display = 'block';
+        }
+
+         //function to close modal
+         function closeModal(){
+            modal.style.display = 'none';
+        }
+    </script>
+
+
+     <style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+    .button{
+        background: transparent;
+        padding: 1em 2em;
+        color:white;
+        border:10px 10px 10px white;
+        border-radius:0px;
+    }
+    .button:hover{
+        background: white
+    }
+    .modal{
+        display:none;
+        position:fixed;
+        z-index:1;
+        left:0;
+        top:0;
+        height: 100%;
+        width:100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.3);
+        
+    }
+    .modal-content{
+        background-color: #dfd4d4;
+        margin: 20% auto;
+        padding:20px;
+        width:35%;
+        height:600px;
+        background: url('2.jpg')
+        /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgb(0,0,0.17); */
+        
+    }
+    .closeBtn{
+        color:#f34636;
+        float:right;
+        font-size: 30px;
+    }
+    .closeBtn:hover,.closeBtn:focus{
+        color:#000;
+        text-decoration: none;
+        cursor:pointer;
+    }
+    
+    </style>
+
+            </div>
+
+
+            <div class="child2">
+               <a href="hitman2.html ">
+                <img src="right-arrow-01.png" height="50px" width="50px" alt="">
+                
+               </a>
+                
+
+            </div>
+
+        </div>
+    </div> 
+
+ <style>  *{
+    margin: 0;
+    padding: 0;
+}
+
+.parent{
+    display: flex;
+    height: 100vh;
+}
+
+.first_col{
+    display: flex;
+    flex-basis: 50%;
+    background: rgb(18, 19, 31);
+    height: 100vh;
+    /* justify-content: center; */
+    align-items: center;
+
+
+}
+
+.writup{
+    position: relative;
+    display: flex;
+    color: white;
+    justify-content: center;
+    height: 50vh;
+    width: 50vh;
+    font-family: 'Righteous', cursive;
+    font-size: 70px;
+
+}
+.writup h1{
+    left: 120px;
+    opacity: 0.04;
+    transform: rotate(-90deg);
+
+}
+
+.writup h1:hover{
+    margin-left: 5px;
+    transition: 0.5;
+}
+
+.container{
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+    height: 45vh;
+    /* background: crimson; */
+    left: -100px;
+    width: 150px;
+}
+.container:hover{
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+
+
+.des1{
+    display: flex;
+    background: red;
+}
+
+.icon1{
+    flex-basis: 50%;
+    
+}
+
+.content{
+    margin-top: 15px;
+    flex-basis: 50%;
+    color: white;
+    font-family: 'Righteous', cursive;
+}
+.name{
+    position: relative;
+    margin-top: 50%;
+    right: -150px;
+}
+
+.name:hover{
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+.name h1{
+    color: rgb(252, 252, 252);
+    font-size: 70px;
+    opacity: 0.5;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    
+
+
+}
+
+.second_col{
+    background: url(./hitman1-01.jpg);
+    display: flex;
+    flex-basis: 40%;
+    height: 100vh;
+
+}
+
+.third_col{
+    display: flex;
+    flex-basis: 10%;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.child1{
+    display: flex;
+    flex-basis: 50%;
+    background: rgb(18, 19, 31);
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.child2{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-basis: 50%;
+    background: rgb(248, 20, 20);
+}
+
+.child2 img:hover{
+
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+.payment{
+    margin-left: 3px;
+    width: 110px;
+    height: 50px;
+    color: white;
+    border: 1px solid white;
+    /* border-radius: 25px; */
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+}
+
+.payment:hover{
+    background: white;
+    color: black;
+    transition: 0.9s;
+}
+
+.left-arrow{
+    transform: rotate(180deg);
+}
+</style> 

@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet"> 
+
+<div style="background-color:black; height:100vh; width:100vh;">   
+    <div style=" height:650px;width:1300px;margin-top:140px;margin-left:300px;border-radius:20px;">
+      <div class="row" style="position:fixed; height:650px; width:1300px">
+        <div class="col-sm-6">
+<h1 style="font-family: 'Special Elite', cursive; color:white; font-size:40px; text-align:center;margin-top:30px">Select Your Profile</h1>
+          
+          <ul class="list-group-flush" style="width: 90%; padding:20px; margin-left:30px ">
+          {{#each info}}
+            <li class="list-group-item" style="padding:20px;background:white;opacity:0.6;text-align:center">
+              {{log this.nick}}
+                <a href='/info/{{this.nick}}'>{{this.nick}}</a>
+            </li>
+          {{/each}}
+            </ul>
+            <form method="GET" action='/info/add'>
+            <input class="btn btn-dark" type="submit" value="Add Hitman" style="margin-left:60px">     
+        </div>
+         <div class="col-sm-6">
+            <img src="1.jpeg" style="width: 120%; height:120%" >
+        </div>
+
+        </div>
+          {{!-- <h1 style="font-family: 'Special Elite', cursive; color:black; font-size:40px; text-align:center;margin-top:30px">Select Your Profile</h1>
+          
+          <ul class="list-group-flush" style="width: 40%; padding:20px; margin-left:300px ">
+          {{#each info}}
+            <li class="list-group-item" style="padding:20px;background:white;opacity:0.6">
+              {{log this.nick}}
+                <a href='/info/{{this.nick}}'>{{this.nick}}</a>
+            </li>
+          {{/each}}
+            </ul>
+            <form method="GET" action='/info/add'>
+            <input class="btn btn-primary" type="submit" value="Add Hitman" style="margin-left:330px">           --}}
+          </div>
+
+          </form>
+    </div>
+</div>
